@@ -7,11 +7,4 @@ const menuRemap = menu.map(pizza => {
   return {name, image, price, ingredients, description, votes, isVeg}
 })
 
-function checkVeg(ingredients) {
-  const noVegIngredients = ["salame", "mozzarella", "salsiccia", "acciughe", "prosciutto", "grana", "scamorza", "gorgonzola"];
-  let isVeg = true;
-  ingredients.forEach(ingredient => {
-    if(noVegIngredients.includes(ingredient)) isVeg = false;
-  });
-  return isVeg;
-}
+menuRemap.sort((a,b) => a.price - b.price);
