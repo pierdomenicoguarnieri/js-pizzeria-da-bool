@@ -1,4 +1,5 @@
 import menu from "./db.js"
+import {checkVeg} from "./functions.js";
 
 const menuRemap = menu.map(pizza => {
   const {name, image, price, ingredients, description, votes} = pizza;
